@@ -1,3 +1,65 @@
-html {
-    background: beige;
+$font-stack: 'Noto Sans KR',
+sans-serif;
+$primary-color: #EEEEEE;
+$secondary-color: #DDDDDD;
+$tertiary-color: #C5C7C2;
+$text-header-color: #707070;
+$textcopy-color:#525252;
+
+
+* {
+    border: 1px black solid;
+}
+
+body {
+    background: $primary-color;
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    color: $textcopy-color;
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px 100px 100px 100px 100px;
+        grid-template-areas:
+            "headerName headerName navBar navBar navBar"
+            "hero hero hero hero hero"
+            "portfolio portfolio portfolio portfolio portfolio"
+            "resume resume resume resume resume"
+            "contact contact contact contact contact"
+            "footer footer footer footer footer"
+
+        ;
+
+        .nav-block {
+            grid-area: navBar;
+
+        }
+
+        .header-block {
+            grid-area: headerName;
+        }
+
+        .hero-block {
+            grid-area: hero;
+        }
+
+        .portfolio-block {
+            grid-area: portfolio;
+        }
+
+        .resume-block {
+            grid-area: resume;
+        }
+
+        .contact-block {
+            grid-area: contact;
+        }
+
+        .footer-block {
+            grid-area: footer;
+        }
+    }
+
 }

@@ -1,4 +1,30 @@
-html {
-  background: beige; }
+* {
+  border: 1px black solid; }
+
+body {
+  background: #EEEEEE;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #525252; }
+  body .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 100px 100px 100px 100px 100px;
+    grid-template-areas: "headerName headerName navBar navBar navBar" "hero hero hero hero hero" "portfolio portfolio portfolio portfolio portfolio" "resume resume resume resume resume" "contact contact contact contact contact" "footer footer footer footer footer"; }
+    body .content .nav-block {
+      grid-area: navBar; }
+    body .content .header-block {
+      grid-area: headerName; }
+    body .content .hero-block {
+      grid-area: hero; }
+    body .content .portfolio-block {
+      grid-area: portfolio; }
+    body .content .resume-block {
+      grid-area: resume; }
+    body .content .contact-block {
+      grid-area: contact; }
+    body .content .footer-block {
+      grid-area: footer; }
 
 /*# sourceMappingURL=website-okt2018.css.map */
