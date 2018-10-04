@@ -18,24 +18,30 @@ body {
     padding: 0;
     color: $textcopy-color;
 
+    .nav-block {
+        position: fixed;
+        top: 0;
+        display: flex;
+        background: $tertiary-color;
+
+        .nav-wrapper {
+            display: flex;
+        }
+    }
+
     .content {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 50px 100px 100px 100px 100px 100px;
+        grid-template-columns: repeat(5, [col] 1fr);
+        grid-template-rows: repeat(4, [row] 100px) 50px;
         grid-template-areas:
-            "headerName headerName navBar navBar navBar"
+            "headerName headerName headerName headerName headerName"
             "hero hero hero hero hero"
             "portfolio portfolio portfolio portfolio portfolio"
             "resume resume resume resume resume"
             "contact contact contact contact contact"
-            "footer footer footer footer footer"
+            "footer footer footer footer footer";
 
-        ;
 
-        .nav-block {
-            grid-area: navBar;
-
-        }
 
         .header-block {
             grid-area: headerName;

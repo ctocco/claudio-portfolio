@@ -7,13 +7,18 @@ body {
   margin: 0;
   padding: 0;
   color: #525252; }
+  body .nav-block {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background: #C5C7C2; }
+    body .nav-block .nav-wrapper {
+      display: flex; }
   body .content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 100px 100px 100px 100px 100px;
-    grid-template-areas: "headerName headerName navBar navBar navBar" "hero hero hero hero hero" "portfolio portfolio portfolio portfolio portfolio" "resume resume resume resume resume" "contact contact contact contact contact" "footer footer footer footer footer"; }
-    body .content .nav-block {
-      grid-area: navBar; }
+    grid-template-columns: repeat(5, [col] 1fr);
+    grid-template-rows: repeat(4, [row] 100px) 50px;
+    grid-template-areas: "headerName headerName headerName headerName headerName" "hero hero hero hero hero" "portfolio portfolio portfolio portfolio portfolio" "resume resume resume resume resume" "contact contact contact contact contact" "footer footer footer footer footer"; }
     body .content .header-block {
       grid-area: headerName; }
     body .content .hero-block {
