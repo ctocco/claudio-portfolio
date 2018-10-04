@@ -35,9 +35,9 @@ body {
       align-items: center; }
   body .content {
     display: grid;
-    grid-template-columns: repeat(5, [col] 1fr);
+    grid-template-columns: repeat(4, [col] 1fr);
     grid-template-rows: repeat(7, [row] 100px) 50px;
-    grid-template-areas: "headerName headerName headerName headerName headerName" "hero hero hero hero hero" "portfolio portfolio portfolio portfolio portfolio" ". about-me about-me about-me ." "about-text about-text about-skills about-skills about-skills" ". resume-title resume-title resume-title ." "resume resume resume resume resume" "contact contact contact contact contact" "footer footer footer footer footer"; }
+    grid-template-areas: "headerName headerName headerName headerName headerName" "hero hero hero hero hero" "portfolio portfolio portfolio portfolio portfolio" "about-me about-me about-me about-me about-me" "about-text about-text about-skills about-skills about-skills" "resume-title resume-title resume-title resume-title resume-title" "resume resume resume resume resume" "contact contact contact contact contact" "footer footer footer footer footer"; }
     body .content .header-block {
       grid-area: headerName; }
     body .content .hero-block {
