@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,IAAK;EACD,UAAU,EAAE,IAAI",
+"mappings": "AAAA,IAAK;EACD,UAAU,EAAE,KAAK",
 "sources": ["website-okt2018.scss"],
 "names": [],
 "file": "website-okt2018.css"
