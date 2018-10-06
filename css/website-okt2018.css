@@ -7,6 +7,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+html {
+  font-size: 16px; }
+
 body {
   background: #eeeeee;
   font-family: "Noto Sans KR", sans-serif;
@@ -14,6 +17,24 @@ body {
   padding: 0;
   color: #525252;
   margin-top: 40px; }
+  body .collapsible-menu {
+    background: rgba(30, 0, 20, 0.1);
+    padding: 0px 30px;
+    border-bottom: 3px solid green;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); }
+    body .collapsible-menu label {
+      cursor: pointer;
+      font-size: 2em;
+      display: block;
+      padding: 10px 0 10px 50px; }
+    body .collapsible-menu input#menu {
+      display: none; }
+    body .collapsible-menu .mob-menu-content {
+      font-weight: 300; }
+      body .collapsible-menu .mob-menu-content ul a {
+        display: block;
+        padding: 5px;
+        text-decoration: none; }
   body .nav-block {
     position: fixed;
     top: 0;
