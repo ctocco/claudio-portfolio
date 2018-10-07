@@ -1,4 +1,6 @@
-$font-stack: "Noto Sans KR", sans-serif;
+$font-stack: 
+// "Noto Sans KR", sans-serif;
+'Cardo', serif;
 $background-color: #eeeeee;
 $secondary-color: #dddddd;
 $tertiary-color: #c5c7c2;
@@ -6,8 +8,9 @@ $text-header-color: #707070;
 $textcopy-color: #525252;
 
 * {
-  border: 1px black solid;
+  // border: 1px black solid;
   margin: 0;
+  box-sizing: border-box;
 }
 
 ul {
@@ -20,13 +23,19 @@ html {
   font-size: 16px;
 }
 
+h1 {
+  margin: 0;
+}
+
 body {
-  background: $background-color;
+  
   font-family: $font-stack;
   margin: 0;
   padding: 0;
   color: $textcopy-color;
   margin-top: 40px;
+  z-index: -1;
+  height: 100%;
 
   .collapsible-menu {
     background: rgba(30, 0, 20, 0.1);
@@ -37,19 +46,27 @@ body {
       cursor: pointer;
       font-size: 2em;
       display: block;
-      padding: 10px 0 10px 50px;
+      padding: 10px 0 10px 0px;
+      text-align: right;
     }
     input#menu {
       display: none;
     }
+
     .mob-menu-content {
       font-weight: 300;
-
+      max-height: 0;
+      overflow: hidden;
+      font-family: "Oswald", sans-serif;
+      padding: 0 0 0 50px;
+     
       ul {
         a {
           display: block;
           padding: 5px;
           text-decoration: none;
+          text-align: right;
+         
         }
       }
     }
@@ -83,24 +100,66 @@ body {
   .content {
     display: grid;
     grid-template-columns: repeat(4, [col] 1fr);
-    grid-template-rows: repeat(7, [row] 100px) 50px;
+    grid-template-rows: 100vh 50% repeat(5, [row] 100px)auto 50px;
     grid-template-areas:
-      "headerName headerName headerName headerName headerName"
-      "hero hero hero hero hero"
-      "portfolio portfolio portfolio portfolio portfolio"
-      "about-me about-me about-me about-me about-me"
-      "about-text about-text about-skills about-skills about-skills"
-      "resume-title resume-title resume-title resume-title resume-title"
-      "resume resume resume resume resume"
-      "contact contact contact contact contact"
-      "footer footer footer footer footer";
+      "headerName headerName headerName headerName"
+      "quote quote quote quote"
+      "portfolio portfolio portfolio portfolio"
+      "about-me about-me about-me about-me"
+      "about-text about-text about-skills about-skills"
+      " resume-title resume-title resume-title resume-title"
+      "resume resume resume resume"
+      "contact contact contact contact"
+      "footer footer footer footer";
 
     .header-block {
+      display: flex;
+      flex-direction: column;
       grid-area: headerName;
+      justify-content: safe center;
+      
+      background:  linear-gradient(
+        rgba(0, 0, 0, 1.0), 
+        rgba(148, 255, 157, 0.5)
+      ), url("/img/Sky.jpg") no-repeat right top;
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      color: white;
+      h1 {
+        font-size: 4em;
+      }
+      p {
+        font-size: 2em;
+      }
+      h1, p {
+        align-self: center;
+      }
     }
 
     .hero-block {
-      grid-area: hero;
+      grid-area: quote;
+      position: relative;
+   
+     
+      .videocontainer {
+        position: relative;
+        z-index:0;
+
+        video {
+          width: 100%;
+          height: 100%;
+        }
+      }
+ 
+      .overlay {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+    }
+  
     }
 
     .portfolio-block {
@@ -129,11 +188,94 @@ body {
 
     .contact-block {
       grid-area: contact;
+      padding: 10px;
+      form {
+        margin: auto;
+     
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (4, 1fr);
+        width: 400px;
+        height: auto;
+        grid-gap: 10px;
+        // border-top-right-radius: 10px;
+        // border-top-left-radius: 10px;
+       
+        h1 {
+          justify-self: center;
+          grid-column: 1/3;
+          font-size: 2rem;
+        }
+        
+        input, textarea {
+          justify-self: center;
+          font-family: karla, sans-serif;
+          grid-column: 1/3;
+          width: 250px;
+          border: none;
+          
+        }
+
+        input {
+          border-bottom: 1px solid black;
+        }
+
+        textarea {
+          background: beige;
+        }
+
+      input[type="text"]{
+        padding: 10px;
+        width: 250px;}
+
+
+      input[type="email"] {
+        width: 250px;
+        padding: 10px;
+      }
+
+      textarea[required="text"] {
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+
+      input[type="submit"] {
+        margin: 10px 0;
+        justify-self: center;
+        grid-column: 1/3;
+        background-color: #77A6F7;
+        padding: 10px;
+        width: 270px;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #D3E3FC;
+      }
+      
+      textarea[required] {
+        justify-self: center;
+        max-width: 250px;
+        height: 100px;
+        text-decoration: none;
+        padding: 10px;
+        
+      }
+      
+   
     }
+   }
 
     .footer-block {
       grid-area: footer;
       display: flex;
+      justify-content: space-around;
+      align-items: center;
+      i {
+        font-size: 2em;
+        color: #E85A4F;
+        justify-self: center;
+        
+      }
     }
   }
 }
@@ -153,10 +295,10 @@ body {
   .content {
     width: 100%;
     grid-template-columns: 1fr !important;
-    grid-template-rows: repeat(9, [row] 100px) 50px;
+    grid-template-rows: 100vh 25vh repeat(6, [row] 100px) auto 50px !important;
     grid-template-areas:
       "headerName"
-      "hero"
+      "quote"
       "portfolio"
       "about-me"
       "about-text"
@@ -170,11 +312,37 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 601px) {
-  .collapsible-menu {
+  body {
+    .collapsible-menu {
+      display: none;
+    }
+    .nav-block {
+      ul {
+       li   {
+         padding:8.4px;
+       }
+      }
+    }
+  }
+
+  #name-title {
     display: none;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #name-title {
+    display: inline;
+  }
+  // toggle menu for the mobile versions
+
+}
+
+input:checked ~ label {
+  color: green;
+}
+
+input:checked ~ .mob-menu-content {
+  max-height: 100%;
 }
