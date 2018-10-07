@@ -1,17 +1,27 @@
 $font-stack: 
-// "Noto Sans KR", sans-serif;
-'Cardo', serif;
+"Noto Sans KR", sans-serif;
+// 'Cardo', serif;
+//  'Archivo', sans-serif;
 $background-color: #eeeeee;
 $secondary-color: #dddddd;
-$tertiary-color: #c5c7c2;
+$tertiary-color: white;
 $text-header-color: #707070;
 $textcopy-color: #525252;
+
+// #333
 
 * {
   // border: 1px black solid;
   margin: 0;
   box-sizing: border-box;
 }
+
+a {
+    color: $textcopy-color;
+    text-decoration: none; 
+    line-height: 1px;/* no underline */
+}
+
 
 ul {
   list-style-type: none;
@@ -21,6 +31,8 @@ ul {
 
 html {
   font-size: 16px;
+  min-width: 100%;
+  line-height: none;
 }
 
 h1 {
@@ -30,23 +42,28 @@ h1 {
 body {
   
   font-family: $font-stack;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   color: $textcopy-color;
-  margin-top: 40px;
+  // margin-top: 40px;
   z-index: -1;
   height: 100%;
+  overflow-x:hidden;
+ 
 
   .collapsible-menu {
+    // position: fixed;
+    width: 100%;
     background: rgba(30, 0, 20, 0.1);
     padding: 0px 30px;
     border-bottom: 3px solid green;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    
     label {
       cursor: pointer;
       font-size: 2em;
       display: block;
-      padding: 10px 0 10px 0px;
+      padding: 5px 0 5px 0px;
       text-align: right;
     }
     input#menu {
@@ -54,6 +71,7 @@ body {
     }
 
     .mob-menu-content {
+    
       font-weight: 300;
       max-height: 0;
       overflow: hidden;
@@ -61,12 +79,16 @@ body {
       padding: 0 0 0 50px;
      
       ul {
+        li {
+          margin-top:10px;
+        
         a {
           display: block;
-          padding: 5px;
+          padding-bottom: 15px;
           text-decoration: none;
           text-align: right;
-         
+    
+        }
         }
       }
     }
@@ -76,8 +98,9 @@ body {
     position: fixed;
     top: 0;
     display: flex;
-    background: $tertiary-color;
     width: 100%;
+    z-index: 10000;
+    transition: all 1s ease-in-out;
 
     .nav-logo {
       display: flex;
@@ -97,13 +120,20 @@ body {
     }
   }
 
+  .nav-block.active {
+    background: $tertiary-color;
+     }
+
   .content {
     display: grid;
     grid-template-columns: repeat(4, [col] 1fr);
-    grid-template-rows: 100vh 50% repeat(5, [row] 100px)auto 50px;
+    grid-template-rows: 100vh auto auto repeat(3, [row] 100px) auto auto 50px;
+    width: 100%;
+    height: auto;
+
     grid-template-areas:
       "headerName headerName headerName headerName"
-      "quote quote quote quote"
+      "aboutMe aboutMe aboutMe aboutMe"
       "portfolio portfolio portfolio portfolio"
       "about-me about-me about-me about-me"
       "about-text about-text about-skills about-skills"
@@ -112,7 +142,7 @@ body {
       "contact contact contact contact"
       "footer footer footer footer";
 
-    .header-block {
+    .headerName {
       display: flex;
       flex-direction: column;
       grid-area: headerName;
@@ -127,43 +157,118 @@ body {
       height: 100%;
       width: 100%;
       color: white;
+      z-index: -50;
       h1 {
+        background: rgb(3, 3, 3);
         font-size: 4em;
+        margin: 10px;
+        padding: 0px 20px 0 20px;
       }
       p {
         font-size: 2em;
+        color: 
+        #525252;
+        background: rgba(255, 255, 255, .7);
+        padding: 10px 5px;
+        margin: -25px 0 0 -45px;
+        z-index: -2;
       }
       h1, p {
         align-self: center;
       }
+
+      .triangle {
+        // display: float;
+        position: absolute;
+     
+        width: 100vw;
+        height: 100vh;
+        background: 
+        linear-gradient(
+          rgba(57,204,204, .4), 
+          rgba(57,204,204, .9)
+      ), url("/img/yellow.jpg") no-repeat right top;
+        // background-color: #39cccc;
+        background-size: cover;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        z-index: -3;
+      }
     }
 
-    .hero-block {
-      grid-area: quote;
+    .aboutMe {
+      grid-area: aboutMe;
       position: relative;
-   
-     
-      .videocontainer {
+      
+      h1{
+        text-align: center;
+        margin: 40px 0;
+      }
+      .about-me-container {
+        width: 100%;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
         position: relative;
-        z-index:0;
+   
+        img {
+          background-size: cover;
+          max-width: 250px;
+          height: auto;
+          margin-top: 20px;
+        }
+        .textbox {
+          width: 70%;
+          padding: 50px;
+          text-align: center;
+          margin: 0 auto;
 
-        video {
-          width: 100%;
-          height: 100%;
+        p{
+          
         }
       }
- 
-      .overlay {
-        position:absolute;
-        top:0;
-        left:0;
-        z-index:1;
+     
+      }
+
     }
-  
+    .image-circle {
+      border-radius: 50%;
     }
 
     .portfolio-block {
       grid-area: portfolio;
+      h1 {
+        text-align: center;
+        margin: 50px 0 0 0 ;
+      }
+
+   
+
+      .portfolio-grid {
+        list-style: none;
+        padding: 10vh;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+     
+
+        li {
+          width: 350px;
+          height: 350px;
+          margin: 20px;
+          a{
+            img{
+              background-attachment: fixed;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+
+            }
+          }
+        }
+      }
+
     }
 
     .about-me-header {
@@ -184,11 +289,28 @@ body {
 
     .resume-block {
       grid-area: resume;
+      width: 100%;
+      h1 {
+        text-align: center;
+      }
+      
+      .resume-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      
+      .resume {
+        width: 34vw;
+        margin: 20px;
+      }
+      }
     }
 
     .contact-block {
       grid-area: contact;
       padding: 10px;
+      width: 100%;
       form {
         margin: auto;
      
@@ -206,12 +328,12 @@ body {
           grid-column: 1/3;
           font-size: 2rem;
         }
-        
+   
         input, textarea {
           justify-self: center;
           font-family: karla, sans-serif;
           grid-column: 1/3;
-          width: 250px;
+          width: 50vw;
           border: none;
           
         }
@@ -221,47 +343,48 @@ body {
         }
 
         textarea {
-          background: beige;
+          background: white;
+        
         }
 
       input[type="text"]{
-        padding: 10px;
-        width: 250px;}
-
-
+        padding: 10px;}
+      
       input[type="email"] {
-        width: 250px;
+     
         padding: 10px;
       }
 
       textarea[required="text"] {
         padding-left: 10px;
         padding-top: 10px;
+        width: 50vw;
+        height: 50vh;
       }
 
       input[type="submit"] {
         margin: 10px 0;
         justify-self: center;
         grid-column: 1/3;
-        background-color: #77A6F7;
+        background-color: #333;
+        color: white;
         padding: 10px;
-        width: 270px;
+        width: 50vw;
       }
       
       input[type="submit"]:hover {
-        background-color: #D3E3FC;
+        background-color: $secondary-color;
+        color: #333;
       }
       
       textarea[required] {
         justify-self: center;
-        max-width: 250px;
+        max-width: 50vw;
         height: 100px;
         text-decoration: none;
         padding: 10px;
         
       }
-      
-   
     }
    }
 
@@ -270,6 +393,7 @@ body {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      background: #333;
       i {
         font-size: 2em;
         color: #E85A4F;
@@ -286,19 +410,16 @@ body {
     display: none !important;
     background-color: red;
     color: blue;
-  }
-
-  body {
-    margin: 0;
+    z-index: 100!important;
   }
 
   .content {
-    width: 100%;
+    width: 100vw;
     grid-template-columns: 1fr !important;
-    grid-template-rows: 100vh 25vh repeat(6, [row] 100px) auto 50px !important;
+    grid-template-rows: 100vh auto auto repeat(4, [row] 100px) auto auto 50px !important;
     grid-template-areas:
       "headerName"
-      "quote"
+      "aboutMe"
       "portfolio"
       "about-me"
       "about-text"
@@ -307,8 +428,57 @@ body {
       "resume"
       "contact"
       "footer" !important;
+
+    .headerName {
+    // margin: 0 auto;
+    width: 100vw !important;
+
+      .triangle {
+        z-index: 0;
+        width: 100vw !important;
+        height: 100vh !important;
+      }
+      h1{
+        font-size: 2.5em !important;
+      }
+      p {
+        font-size: 1.5em !important;
+      }      
+    }
+
+    .aboutMe{
+      .about-me-container{
+        .textbox {
+          width: 100% !important; }
+        p{
+        padding: 0 25px 0 25px !important;
+        }
+      }
+    }
+      .contact-block{
+  
+        textarea[required] {
+          justify-self: center;
+          max-width: 400px !important;
+        }
+        input, textarea {
+        width: 400px !important;
+        }
+      }
+      
+      .resume {
+        width: 70vw !important;
+        margin: 10px;
+      }
+
+      
+     
   }
+
+
 }
+
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 601px) {
@@ -316,6 +486,7 @@ body {
     .collapsible-menu {
       display: none;
     }
+
     .nav-block {
       ul {
        li   {
@@ -323,12 +494,21 @@ body {
        }
       }
     }
+
+
   }
 
-  #name-title {
-    display: none;
-  }
+      #name-title {
+      display: none;
+    }
 }
+
+
+
+
+
+
+
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -346,3 +526,26 @@ input:checked ~ label {
 input:checked ~ .mob-menu-content {
   max-height: 100%;
 }
+
+
+
+
+   
+     
+    //   .videocontainer {
+    //     position: relative;
+    //     z-index:0;
+
+    //     video {
+    //       width: 100%;
+    //       height: 100%;
+    //     }
+    //   }
+ 
+    //   .overlay {
+    //     position:absolute;
+    //     top:0;
+    //     left:0;
+    //     z-index:1;
+    // }
+  
