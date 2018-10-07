@@ -18,26 +18,26 @@
 </head>
 
 <body>
-    <div class="collapsible-menu">
+    <div class="collapsible-menu" id="home">
         <input type="checkbox" id="menu">
         <label for="menu" id="menu"><i class="fas fa-align-justify"></i></label>
         <div class="mob-menu-content">
             <ul>
-                <li><a class="nav-link scroll" href="">Home</a></li>
-                <li><a class="nav-link scroll" href="">Work</a></li>
-                <li><a class="nav-link scroll" href="">About</a></li>
+                <li><a class="nav-link scroll" href="#home">Home</a></li>
+                <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
+                <li><a class="nav-link scroll" href="#about">About</a></li>
                 <li><a class="nav-link scroll" href="#contact">Contact</a></li>
             </ul>
             </nav>
         </div>
     </div>
 
-    <nav class="nav-block active">
+    <nav class="nav-block active" id="home">
         <h1 class="nav-logo" id="name-title">Claudio Tocco</h1>
         <ul class="nav-wrapper">
-            <li><a class="nav-link scroll" href="">Home</a></li>
-            <li><a class="nav-link scroll" href="">Work</a></li>
-            <li><a class="nav-link scroll" href="">About</a></li>
+            <li><a class="nav-link scroll" href="#home">Home</a></li>
+            <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
+            <li><a class="nav-link scroll" href="#about">About</a></li>
             <li><a class="nav-link scroll" href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -49,7 +49,7 @@
             <div class="triangle"></div>
         </header>
 
-        <section class="aboutMe">
+        <section class="aboutMe" id="about">
 
             <h1>About Me</h1>
             <div class="about-me-container">
@@ -65,9 +65,9 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio-block">
+        <section class="portfolio-block" id="portfolio">
             <h1>Portfolio</h1>
-            <div id="portfolio">
+            <div>
                 <ul class="portfolio-grid">
                     <li>
                         <a href="#" class="animated flipInX">
@@ -105,10 +105,14 @@
             </div>
 
         </section>
-        <section class="about-me-header">About Me Title</section>
+        <section class="about-me-header">
+            <blockquote>I hear and I forget. I see and I remember. I do and I understand.</blockquote>
+            <cite>Confuscious</cite>
+
+        </section>
         <aside class="about-text">I can do these things</aside>
         <aside class="about-skills">I can do these things</aside>
-        <section class="resume-title">Previous Experience</section>
+        <!-- <section class="resume-title">Previous Experience</section> -->
         <section class="resume-block">
             <h1 class="resume-title"> Interesting Things I've Done </h1>
             <div class="resume-wrapper">
