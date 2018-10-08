@@ -10,39 +10,39 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Archivo:400,500,700" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,900" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/website-okt2018.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>Claudio Tocco portfolio website</title>
 </head>
 
 <body>
-    <div class="collapsible-menu" id="home">
+    <div class="collapsible-menu">
         <input type="checkbox" id="menu">
         <label for="menu" id="menu"><i class="fas fa-align-justify"></i></label>
         <div class="mob-menu-content">
             <ul>
                 <li><a class="nav-link scroll" href="#home">Home</a></li>
-                <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
                 <li><a class="nav-link scroll" href="#about">About</a></li>
+                <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
                 <li><a class="nav-link scroll" href="#contact">Contact</a></li>
             </ul>
             </nav>
         </div>
     </div>
 
-    <nav class="nav-block active" id="home">
+    <nav class="nav-block active">
         <h1 class="nav-logo" id="name-title">Claudio Tocco</h1>
         <ul class="nav-wrapper">
             <li><a class="nav-link scroll" href="#home">Home</a></li>
-            <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
             <li><a class="nav-link scroll" href="#about">About</a></li>
+            <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
             <li><a class="nav-link scroll" href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="content">
+    <div class="content" id="home">
         <header class="headerName">
             <h1>Claudio Tocco</h1>
             <p>Junior Full Stack Web Developer</p>
@@ -65,6 +65,8 @@
                 </div>
             </div>
         </section>
+
+
         <section class="portfolio-block" id="portfolio">
             <h1>Portfolio</h1>
             <div>
@@ -99,79 +101,94 @@
                             <img src="/img/abstract_pattern.jpg" alt="abstract_image" />
                         </a>
                     </li>
-
                 </ul>
-
             </div>
-
         </section>
+
         <section class="about-me-header">
-            <blockquote>I hear and I forget. I see and I remember. I do and I understand.</blockquote>
-            <cite>Confuscious</cite>
-
+            <div class="quote-container">
+                <blockquote>I hear and I forget. I see and I remember. I do and I understand.</blockquote>
+                <cite>Confuscious</cite>
+            </div>
         </section>
-        <aside class="about-text">I can do these things</aside>
-        <aside class="about-skills">I can do these things</aside>
+
+
+        <aside class="about-text"></aside>
+        <aside class="about-skills"></aside>
+
+
         <!-- <section class="resume-title">Previous Experience</section> -->
+
+
         <section class="resume-block">
             <h1 class="resume-title"> Interesting Things I've Done </h1>
+
             <div class="resume-wrapper">
                 <div class="resume" id="resume-top">
+                    <i class="fas fa-user-graduate"></i>
                     <p>2018 - > 2019<br> Student - Digital Career Institute<br> Full Stack Web Developer</p>
                 </div>
                 <div class="resume" id="resume-top">
+                    <i class="fas fa-briefcase"></i>
                     <p>2014 - > present <br> Self-Employed - Sound Designer /Musician<br> Theatre, Dance, Video,
                         Animation</p>
                 </div>
                 <div class="resume">
+                    <i class="fas fa-briefcase"></i>
                     <p>2016 - > 2018<br> Customer Service Executive - Booking.com <br>
                     </p>
                 </div>
                 <div class="resume">
+                    <i class="fas fa-briefcase"></i>
                     <p>2013 -> 2016 <br> Venues & Events Officer/AV Tech - City of Yarra<br> Supervising events &
                         operating
                         sound and vision</p>
                 </div>
                 <div class="resume" id="resume-bottom">
+                    <i class="fas fa-user-graduate"></i>
                     <p>2004 -> 2007<br> Bachelor of Business (marketing)<br> Experience as marketing assistant and
                         marketing coordinator</p>
                 </div>
                 <div class="resume" id="resume-bottom">
+                    <i class="fas fa-user-graduate"></i>
                     <p>2004 -> 2007<br> Bachelor of Business (marketing)<br> Experience as marketing assistant and
                         marketing coordinator</p>
                 </div>
             </div>
+
         </section>
+
         <section id="contact" class="contact-block">
+
             <form action="form.php" method="post">
                 <h1>Want to hire me?</h1>
                 <!-- <label for="firstname">Name</label> -->
                 <input class="name-input" type="text" name="firstname" id="firstname" placeholder="Name" required>
-
                 <!-- <label for="lastname">Last Name</label> -->
                 <input class="last-name-input" type="text" name="lastname" id="lastname" placeholder="Last Name"
                     required>
-
                 <!-- <label for="email">E-mail</label> -->
                 <input type="email" name="email" placeholder="E-mail" required>
-
                 <!-- <label for="message">How Can I Help You?</label> -->
                 <textarea name="message" id="message" required="text" maxlength="200" wrap="hard" placeholder="Write your request here"></textarea>
-
-
                 <input type="submit" value="Submit">
             </form>
+
         </section>
 
         <footer class="footer-block">
+
             <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
             <a href="twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+
         </footer>
 
     </div>
+
     <script src="/js/javascript.js"></script>
+
 </body>
 
 </html>

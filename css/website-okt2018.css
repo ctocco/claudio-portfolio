@@ -31,15 +31,16 @@ body {
   overflow-x: hidden; }
   body .collapsible-menu {
     width: 100%;
-    background: rgba(30, 0, 20, 0.1);
-    padding: 0px 30px;
-    border-bottom: 3px solid green;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); }
+    background: white;
+    padding: 0px 20px;
+    border-bottom: 3px solid #333;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 100; }
     body .collapsible-menu label {
       cursor: pointer;
       font-size: 2em;
       display: block;
-      padding: 5px 0 5px 0px;
       text-align: right; }
     body .collapsible-menu input#menu {
       display: none; }
@@ -77,14 +78,18 @@ body {
       justify-content: space-evenly;
       align-items: center; }
   body .nav-block.active {
-    background: white; }
+    background-color: white;
+    transition: all 1s ease-in-out;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25); }
   body .content {
     display: grid;
     grid-template-columns: repeat(4, [col] 1fr);
     grid-template-rows: 100vh auto auto auto auto auto auto 50px;
     width: 100%;
     height: auto;
-    grid-template-areas: "headerName headerName headerName headerName" "aboutMe aboutMe aboutMe aboutMe" "portfolio portfolio portfolio portfolio" "about-me about-me about-me about-me" "about-text about-text about-skills about-skills" "resume resume resume resume" "contact contact contact contact" "footer footer footer footer"; }
+    grid-template-areas: "headerName headerName headerName headerName" "aboutMe aboutMe aboutMe aboutMe" "portfolio portfolio portfolio portfolio" "about-me about-me about-me about-me" "resume resume resume resume" "about-text about-text about-skills about-skills" "contact contact contact contact" "footer footer footer footer"; }
     body .content .headerName {
       display: flex;
       flex-direction: column;
@@ -135,12 +140,16 @@ body {
           background-size: cover;
           max-width: 250px;
           height: auto;
-          margin-top: 20px; }
+          margin-top: 20px;
+          overflow: hidden; }
         body .content .aboutMe .about-me-container .textbox {
           width: 70%;
           padding: 50px;
           text-align: center;
           margin: 0 auto; }
+    body .content img:hover {
+      border: 2px solid black;
+      transition: all 3s ease; }
     body .content .image-circle {
       border-radius: 50%; }
     body .content .portfolio-block {
@@ -167,21 +176,25 @@ body {
             width: 100%; }
     body .content .about-me-header {
       padding: 100px;
-      background: #333;
+      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("/img/Sky.jpg") no-repeat right top;
+      background-attachment: fixed;
+      background-size: cover;
       grid-area: about-me;
       text-align: center;
       color: #dddddd; }
-      body .content .about-me-header blockquote {
-        font-size: 1.5em; }
+      body .content .about-me-header .quote-container blockquote {
+        font-size: 2em;
+        font-weight: 300; }
     body .content .about-text {
-      grid-area: about-text; }
+      grid-area: about-text;
+      text-align: center; }
     body .content .about-skills {
-      grid-area: about-skills; }
-    body .content .resume-title {
-      grid-area: resume-title; }
+      grid-area: about-skills;
+      text-align: center; }
     body .content .resume-block {
       grid-area: resume;
-      width: 100%; }
+      width: 100%;
+      margin-top: 50px; }
       body .content .resume-block h1 {
         text-align: center; }
       body .content .resume-block .resume-wrapper {
@@ -189,10 +202,14 @@ body {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
-        margin: 80px 0; }
+        margin: 70px 0; }
         body .content .resume-block .resume-wrapper .resume {
           width: 34vw;
-          margin: 20px; }
+          padding: 20px;
+          display: flex; }
+          body .content .resume-block .resume-wrapper .resume i {
+            font-size: 1.5em;
+            padding-right: 10px; }
     body .content .contact-block {
       grid-area: contact;
       padding: 10px 0 100px 0;
@@ -239,7 +256,8 @@ body {
           width: 50vw; }
         body .content .contact-block form input[type="submit"]:hover {
           background-color: #dddddd;
-          color: #333; }
+          color: #333;
+          transition: all 2s ease; }
         body .content .contact-block form textarea[required] {
           justify-self: center;
           max-width: 50vw;
@@ -254,7 +272,7 @@ body {
       background: #333; }
       body .content .footer-block i {
         font-size: 2em;
-        color: #E85A4F;
+        color: lavenderblush;
         justify-self: center; }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
