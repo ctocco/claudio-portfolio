@@ -95,7 +95,7 @@ body {
       flex-direction: column;
       grid-area: headerName;
       justify-content: safe center;
-      background: linear-gradient(black, rgba(148, 255, 157, 0.5)), url("/src/img/Sky.jpg") no-repeat right top;
+      background: linear-gradient(black, rgba(148, 255, 157, 0.5)), url("/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       height: 100%;
@@ -121,7 +121,7 @@ body {
         position: absolute;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(rgba(57, 204, 204, 0.4), rgba(57, 204, 204, 0.9)), url("/src/img/yellow.jpg") no-repeat right top;
+        background: linear-gradient(rgba(57, 204, 204, 0.4), rgba(57, 204, 204, 0.9)), url("/img/yellow.jpg") no-repeat right top;
         background-size: cover;
         clip-path: polygon(100% 0, 0 0, 100% 100%);
         z-index: -3; }
@@ -177,7 +177,7 @@ body {
             width: 100%; }
     body .content .about-me-header {
       padding: 100px;
-      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("/src/img/Sky.jpg") no-repeat right top;
+      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       grid-area: about-me;
@@ -299,7 +299,7 @@ body {
       .content .headerName h1 {
         font-size: 2.5em !important; }
       .content .headerName p {
-        font-size: 1.3em !important; }
+        font-size: 1.5em !important; }
     .content .aboutMe .about-me-container .textbox {
       width: 100% !important; }
     .content .aboutMe .about-me-container p {
@@ -332,4 +332,4 @@ input:checked ~ label {
 input:checked ~ .mob-menu-content {
   max-height: 100%; }
 
-/*# sourceMappingURL=website-okt2018.css.map */
+/*# sourceMappingURL=main.css.map */
