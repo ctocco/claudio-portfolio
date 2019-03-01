@@ -95,7 +95,7 @@ body {
       flex-direction: column;
       grid-area: headerName;
       justify-content: safe center;
-      background: linear-gradient(black, rgba(148, 255, 157, 0.5)), url("/src/img/Sky.jpg") no-repeat right top;
+      background: linear-gradient(black, rgba(148, 255, 157, 0.5)), url("src/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       height: 100%;
@@ -124,7 +124,7 @@ body {
         position: absolute;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(rgba(57, 204, 204, 0.4), rgba(57, 204, 204, 0.9)), url("/src/img/yellow.jpg") no-repeat right top;
+        background: linear-gradient(rgba(57, 204, 204, 0.4), rgba(57, 204, 204, 0.9)), url("src/img/yellow.jpg") no-repeat right top;
         background-size: cover;
         clip-path: polygon(100% 0, 0 0, 100% 100%);
         z-index: -3; }
@@ -180,7 +180,7 @@ body {
             width: 100%; }
     body .content .about-me-header {
       padding: 100px;
-      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("/src/img/Sky.jpg") no-repeat right top;
+      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("src/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       grid-area: about-me;
