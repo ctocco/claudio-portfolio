@@ -149,7 +149,7 @@ body {
       justify-content: safe center;
 
       background: linear-gradient(rgba(0, 0, 0, 1), rgba(148, 255, 157, 0.5)),
-        url("src/img/Sky.jpg") no-repeat right top;
+        url("/src/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       height: 100%;
@@ -185,7 +185,7 @@ body {
             rgba(57, 204, 204, 0.4),
             rgba(57, 204, 204, 0.9)
           ),
-          url("src/img/yellow.jpg") no-repeat right top;
+          url("/src/img/yellow.jpg") no-repeat right top;
         // background-color: #39cccc;
         background-size: cover;
         clip-path: polygon(100% 0, 0 0, 100% 100%);
