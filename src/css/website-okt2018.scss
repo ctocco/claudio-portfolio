@@ -175,8 +175,12 @@ body {
         align-self: center;
       }
 
+      .linked {
+        font-size: 40px;
+        align-self: center;
+      }
+
       .triangle {
-        // display: float;
         position: absolute;
 
         width: 100vw;
@@ -270,7 +274,7 @@ body {
     .about-me-header {
       padding: 100px;
       background: linear-gradient(rgba(51, 51, 51, 1), rgba(148, 255, 157, 0.5)),
-        url("src/img/Sky.jpg") no-repeat right top;
+        url("/src/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       grid-area: about-me;

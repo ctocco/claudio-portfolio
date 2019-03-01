@@ -117,6 +117,9 @@ body {
       body .content .headerName h1,
       body .content .headerName p {
         align-self: center; }
+      body .content .headerName .linked {
+        font-size: 40px;
+        align-self: center; }
       body .content .headerName .triangle {
         position: absolute;
         width: 100vw;
@@ -177,7 +180,7 @@ body {
             width: 100%; }
     body .content .about-me-header {
       padding: 100px;
-      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("src/img/Sky.jpg") no-repeat right top;
+      background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("/src/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
       background-size: cover;
       grid-area: about-me;
