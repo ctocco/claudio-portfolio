@@ -71,7 +71,8 @@ body {
       text-align: center;
       font-weight: 300;
       align-items: center;
-      justify-content: space-evenly; }
+      justify-content: space-evenly;
+      margin-bottom: 5px; }
     body .nav-block .nav-wrapper {
       display: flex;
       flex-grow: 3;
@@ -152,8 +153,8 @@ body {
           text-align: center;
           margin: 0 auto; }
     body .content img:hover {
-      border: 2px solid black;
-      transition: all 3s ease; }
+      border: 2px solid #333;
+      transition: all 0.1s ease-in-out; }
     body .content .image-circle {
       border-radius: 50%; }
     body .content .portfolio-block {
@@ -172,12 +173,34 @@ body {
         body .content .portfolio-block .portfolio-grid li {
           width: 350px;
           height: 350px;
-          margin: 20px; }
+          margin: 20px;
+          position: relative; }
           body .content .portfolio-block .portfolio-grid li a img {
             background-attachment: fixed;
             background-size: cover;
             height: 100%;
-            width: 100%; }
+            width: 100%;
+            transition: 0.5s ease;
+            backface-visibility: hidden;
+            opacity: 0.6;
+            background: white; }
+          body .content .portfolio-block .portfolio-grid li a img:hover {
+            opacity: 1; }
+          body .content .portfolio-block .portfolio-grid li a .middle {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center; }
+            body .content .portfolio-block .portfolio-grid li a .middle .text {
+              font-size: 4rem;
+              color: #fffafb;
+              text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 2px 1px 0 #333; }
+          body .content .portfolio-block .portfolio-grid li a aside {
+            margin-top: 0.2rem;
+            font-size: 0.9rem; }
     body .content .about-me-header {
       padding: 100px;
       background: linear-gradient(#333333, rgba(148, 255, 157, 0.5)), url("/src/img/Sky.jpg") no-repeat right top;
@@ -279,6 +302,8 @@ body {
         font-size: 2em;
         color: lavenderblush;
         justify-self: center; }
+      body .content .footer-block i:hover {
+        color: lightsalmon; }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
@@ -295,14 +320,14 @@ body {
     grid-template-areas: "headerName" "aboutMe" "portfolio" "about-me" "about-text" "about-skills" "resume" "contact" "footer" !important; }
     .content .headerName {
       width: 100vw !important; }
-      .content .headerName .triangle {
-        z-index: 0;
-        width: 100vw !important;
-        height: 100vh !important; }
       .content .headerName h1 {
         font-size: 2.5em !important; }
       .content .headerName p {
         font-size: 1.3em !important; }
+      .content .headerName .triangle {
+        z-index: 0;
+        width: 100vw !important;
+        height: 100vh !important; }
     .content .aboutMe .about-me-container .textbox {
       width: 100% !important; }
     .content .aboutMe .about-me-container p {

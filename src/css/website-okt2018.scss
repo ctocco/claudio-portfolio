@@ -7,10 +7,7 @@ $tertiary-color: white;
 $text-header-color: #707070;
 $textcopy-color: #525252;
 
-// #333
-
 * {
-  // border: 1px black solid;
   margin: 0;
   box-sizing: border-box;
 }
@@ -42,13 +39,11 @@ body {
   margin: 0 auto;
   padding: 0;
   color: $textcopy-color;
-  // margin-top: 40px;
   z-index: -1;
   height: 100%;
   overflow-x: hidden;
 
   .collapsible-menu {
-    // position: fixed;
     width: 100%;
     background: white;
     padding: 0px 20px;
@@ -61,7 +56,6 @@ body {
       cursor: pointer;
       font-size: 2em;
       display: block;
-      // padding: 5px 0 5px 0px;
       text-align: right;
     }
     input#menu {
@@ -74,7 +68,6 @@ body {
       overflow: hidden;
       font-family: "Oswald", sans-serif;
       padding: 0 0 0 50px;
-
       ul {
         li {
           margin-top: 10px;
@@ -106,6 +99,7 @@ body {
       font-weight: 300;
       align-items: center;
       justify-content: space-evenly;
+      margin-bottom: 5px;
     }
 
     .nav-wrapper {
@@ -136,7 +130,6 @@ body {
       "aboutMe aboutMe aboutMe aboutMe"
       "portfolio portfolio portfolio portfolio"
       "about-me about-me about-me about-me"
-      // " resume-title resume-title resume-title resume-title"
       "resume resume resume resume"
       "about-text about-text about-skills about-skills"
       "contact contact contact contact"
@@ -190,7 +183,6 @@ body {
             rgba(57, 204, 204, 0.9)
           ),
           url("/src/img/yellow.jpg") no-repeat right top;
-        // background-color: #39cccc;
         background-size: cover;
         clip-path: polygon(100% 0, 0 0, 100% 100%);
         z-index: -3;
@@ -232,8 +224,8 @@ body {
     }
 
     img:hover {
-      border: 2px solid black;
-      transition: all 3s ease;
+      border: 2px solid #333;
+      transition: all 0.1s ease-in-out;
     }
     .image-circle {
       border-radius: 50%;
@@ -259,12 +251,42 @@ body {
           width: 350px;
           height: 350px;
           margin: 20px;
+          position: relative;
+
           a {
             img {
               background-attachment: fixed;
               background-size: cover;
               height: 100%;
               width: 100%;
+              transition: 0.5s ease;
+              backface-visibility: hidden;
+              opacity: 0.6;
+              background: white;
+            }
+            img:hover {
+              opacity: 1;
+            }
+            .middle {
+              position: absolute;
+              width: 100%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              text-align: center;
+
+              .text {
+                font-size: 4rem;
+                color: rgb(255, 250, 251);
+
+                text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333,
+                  2px 1px 0 #333;
+              }
+            }
+            aside {
+              margin-top: 0.2rem;
+              font-size: 0.9rem;
             }
           }
         }
@@ -298,10 +320,6 @@ body {
       grid-area: about-skills;
       text-align: center;
     }
-
-    // .resume-title {
-    //   grid-area: resume-title;
-    // }
 
     .resume-block {
       grid-area: resume;
@@ -422,10 +440,12 @@ body {
         color: lavenderblush;
         justify-self: center;
       }
+      i:hover {
+        color: lightsalmon;
+      }
     }
   }
 }
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .nav-block {
@@ -446,25 +466,22 @@ body {
       "about-me"
       "about-text"
       "about-skills"
-      // "resume-title"
       "resume"
       "contact"
       "footer" !important;
 
     .headerName {
-      // margin: 0 auto;
       width: 100vw !important;
-
-      .triangle {
-        z-index: 0;
-        width: 100vw !important;
-        height: 100vh !important;
-      }
       h1 {
         font-size: 2.5em !important;
       }
       p {
         font-size: 1.3em !important;
+      }
+      .triangle {
+        z-index: 0;
+        width: 100vw !important;
+        height: 100vh !important;
       }
     }
 
@@ -488,7 +505,6 @@ body {
         width: 400px !important;
       }
     }
-
     .resume {
       width: 70vw !important;
       margin: 10px;
@@ -502,7 +518,6 @@ body {
     .collapsible-menu {
       display: none;
     }
-
     .nav-block {
       ul {
         li {
@@ -532,20 +547,3 @@ input:checked ~ label {
 input:checked ~ .mob-menu-content {
   max-height: 100%;
 }
-
-//   .videocontainer {
-//     position: relative;
-//     z-index:0;
-
-//     video {
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-
-//   .overlay {
-//     position:absolute;
-//     top:0;
-//     left:0;
-//     z-index:1;
-// }

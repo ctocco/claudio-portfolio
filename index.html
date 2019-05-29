@@ -1,184 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,900" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,900"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/website-okt2018.css">
+    <link rel="stylesheet" href="src/css/normalize.css" />
+    <link rel="stylesheet" href="src/css/website-okt2018.css" />
     <title>Claudio Tocco portfolio website</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="collapsible-menu">
-        <input type="checkbox" id="menu">
-        <label for="menu" id="menu"><i class="fas fa-align-justify"></i></label>
-        <div class="mob-menu-content">
-            <ul>
-                <li><a class="nav-link scroll" href="#home">Home</a></li>
-                <li><a class="nav-link scroll" href="#about">About</a></li>
-                <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
-                <li><a class="nav-link scroll" href="#contact">Contact</a></li>
-            </ul>
-            </nav>
-        </div>
+      <input type="checkbox" id="menu" />
+      <label for="menu" id="menu"><i class="fas fa-align-justify"></i></label>
+      <nav class="mob-menu-content">
+        <ul>
+          <li><a class="nav-link scroll" href="#home">Home</a></li>
+          <li><a class="nav-link scroll" href="#about">About</a></li>
+          <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
+          <li><a class="nav-link scroll" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
 
     <nav class="nav-block active">
-        <h1 class="nav-logo" id="name-title">Claudio Tocco</h1>
-        <ul class="nav-wrapper">
-            <li><a class="nav-link scroll" href="#home">Home</a></li>
-            <li><a class="nav-link scroll" href="#about">About</a></li>
-            <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
-            <li><a class="nav-link scroll" href="#contact">Contact</a></li>
-        </ul>
+      <h1 class="nav-logo" id="name-title"><strong>CT</strong></h1>
+      <ul class="nav-wrapper">
+        <li><a class="nav-link scroll" href="#home">Home</a></li>
+        <li><a class="nav-link scroll" href="#about">About</a></li>
+        <li><a class="nav-link scroll" href="#portfolio">Work</a></li>
+        <li><a class="nav-link scroll" href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
     <div class="content" id="home">
-        <header class="headerName">
-            <h1>Claudio Tocco</h1>
-            <p>Junior Front End Web Developer</p>
-            <div class="triangle"></div>
-        </header>
+      <header class="headerName">
+        <h1>Claudio Tocco</h1>
+        <p>Junior Front End Web Developer</p>
+        <div class="triangle"></div>
+      </header>
 
-        <section class="aboutMe" id="about">
+      <section class="aboutMe" id="about">
+        <h1>About Me</h1>
+        <div class="about-me-container">
+          <img class="image-circle" src="src/img/claudio_crop.jpg" alt="" />
+          <div class="textbox">
+            <p class="p-resize">
+              I am passionate about technology, creative and I really enjoy
+              sharing what I have learnt with others. Some of the technologies I
+              work with include: HTML/CSS, Javascript, React.js, Redux, Node.js,
+              MongoDB, Sass, Bootstrap, Gatsby and graphQL. I have a real
+              appreciation for User Experience (UX) and Customer Experience (CX)
+              design, and believe successful apps and websites should be geared
+              towards the end-user.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <h1>About Me</h1>
-            <div class="about-me-container">
-                <img class="image-circle" src="src/img/claudio_crop.jpg" alt="">
-                <div class="textbox">
-                    <p class="p-resize">I am passionate about technology, creative and I really enjoy sharing what I have learnt with others. Some of the technologies I work with include: HTML/CSS, Javascript, React.js, Redux, Node.js, MongoDB, Sass, Bootstrap, Gatsby and graphQL. I have a real appreciation for User Experience (UX) and Customer Experience (CX) design, and believe successful apps and websites should be geared towards the end-user. </p>
+      <section class="portfolio-block" id="portfolio">
+        <h1>Portfolio</h1>
+        <p style="text-align: center">Click below to see what I've done...</p>
+        <div>
+          <ul class="portfolio-grid">
+            <li>
+              <a
+                href="https://react-javascript-quiz.ctocco.now.sh/"
+                class="animated flipInX"
+                target="_blank"
+              >
+                <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
+                <div class="middle">
+                  <div class="text">React Quiz</div>
                 </div>
-            </div>
-        </section>
-
-
-        <section class="portfolio-block" id="portfolio">
-            <h1>Portfolio</h1>
-            <p style="text-align: center">Click below to see what I've done...</p>
-            <div>
-                <ul class="portfolio-grid">
-                    <li>
-                        <a href="https://ctocco.github.io/card-game/" class="animated flipInX" target="https://ctocco.github.io/card-game/">
-                            
-                            <img src="src/img/abstract_pattern.jpg" alt="abstract_image"><h1>Mau Mau Card Game</h1></img>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ctocco.github.io/react-github-search/" class="animated flipInX" target="https://ctocco.github.io/react-github-search/">
-                            <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ctocco.github.io/todo-app-react/" class="animated flipInX">
-                            <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ctocco.github.io/weather-api/" class="animated flipInX">
-                            <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ctocco.github.io/quiz-app-react/" class="animated flipInX">
-                            <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="animated flipInX">
-                            <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="about-me-header">
-            <div class="quote-container">
-                <blockquote>I hear and I forget. I see and I remember. I do and I understand.</blockquote>
-                <cite>Confuscious</cite>
-            </div>
-        </section>
-        <aside class="about-text"></aside>
-        <aside class="about-skills"></aside>
-        <section class="resume-block">
-            <h1 class="resume-title"> Interesting Things I've Done </h1>
-            <p style="text-align: center">or head to my LinkedIn  page for a full overview</p>
-  
-            <br/>
-            <p style="text-align: center"><a class="linked" style="font-size: 40px;" href="https://www.linkedin.com/in/claudio-tocco-berlin/" target="https://www.linkedin.com/in/claudio-tocco-berlin/"><i class="fab fa-linkedin"></i></a></p>
-            
-
-            <div class="resume-wrapper">
-                <div class="resume" id="resume-top">
-                    <i class="fas fa-user-graduate"></i>
-                    <p>2018 - > 2019<br> Student - Digital Career Institute<br> Full Stack Web Developer</p>
+                <aside>Questionnaire using React</aside>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lecken.berlin"
+                class="animated flipInX"
+                target="_blank"
+              >
+                <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
+                <div class="middle">
+                  <div class="text">GatsbyJS</div>
                 </div>
-                <div class="resume" id="resume-top">
-                    <i class="fas fa-briefcase"></i>
-                    <p>2014 - > present <br> Self-Employed - Sound Designer /Musician<br> Theatre, Dance, Video,
-                        Animation</p>
+                <aside>
+                  Artists' Website using Gatsby.JS
+                </aside>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://ctocco.github.io/weather-api/"
+                class="animated flipInX"
+                target="_blank"
+              >
+                <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
+                <div class="middle">
+                  <div class="text">Weather</div>
                 </div>
-                <div class="resume">
-                    <i class="fas fa-briefcase"></i>
-                    <p>2016 - > 2018<br> Customer Service Executive - Booking.com <br>
-                    </p>
+                <aside>Worldwide weather using vanilla javascript</aside>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://ctocco.github.io/react-github-search/"
+                class="animated flipInX"
+                target="_blank"
+              >
+                <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
+                <div class="middle">
+                  <div class="text">GitHub</div>
                 </div>
-                <div class="resume">
-                    <i class="fas fa-briefcase"></i>
-                    <p>2013 -> 2016 <br> Venues & Events Officer/AV Tech - City of Yarra<br> Supervising events &
-                        operating
-                        sound and vision</p>
-                </div>
-                <div class="resume" id="resume-bottom">
-                    <i class="fas fa-user-graduate"></i>
-                    <p>2004 -> 2007<br> Bachelor of Business (marketing)<br> Experience as marketing assistant and
-                        marketing coordinator</p>
-                </div>
-                <div class="resume" id="resume-bottom">
-                    <i class="fas fa-user-graduate"></i>
-                    <p>2010 -> 2014<br> Bachelor of Fine Arts (Sound Art)<br> Studies in sound, sculplture and spatial practice</p>
-                </div>
-            </div>
+                <aside>GitHub search APP using React</aside>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="animated flipInX" target="_blank">
+                <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="animated flipInX">
+                <img src="src/img/abstract_pattern.jpg" alt="abstract_image" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        </section>
+      <section class="about-me-header">
+        <div class="quote-container">
+          <blockquote>
+            I hear and I forget. I see and I remember. I do and I understand.
+          </blockquote>
+          <cite>Confuscious</cite>
+        </div>
+      </section>
+      <aside class="about-text"></aside>
+      <aside class="about-skills"></aside>
+      <section class="resume-block">
+        <h1 class="resume-title">Interesting Things I've Done</h1>
+        <p style="text-align: center">
+          or head to my LinkedIn page for a full overview
+        </p>
 
-        <section id="contact" class="contact-block">
+        <br />
+        <p style="text-align: center">
+          <a
+            class="linked"
+            style="font-size: 40px;"
+            href="https://www.linkedin.com/in/claudio-tocco-berlin/"
+            target="https://www.linkedin.com/in/claudio-tocco-berlin/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </p>
 
-            <form action="form.php" method="post">
-                <h1>Want to hire me?</h1>
-                <!-- <label for="firstname">Name</label> -->
-                <input class="name-input" type="text" name="firstname" id="firstname" placeholder="Name" required>
-                <!-- <label for="lastname">Last Name</label> -->
-                <input class="last-name-input" type="text" name="lastname" id="lastname" placeholder="Last Name"
-                    required>
-                <!-- <label for="email">E-mail</label> -->
-                <input type="email" name="email" placeholder="E-mail" required>
-                <!-- <label for="message">How Can I Help You?</label> -->
-                <textarea name="message" id="message" required="text" maxlength="200" wrap="hard" placeholder="Write your request here"></textarea>
-                <input type="submit" value="Submit">
-            </form>
+        <div class="resume-wrapper">
+          <div class="resume" id="resume-top">
+            <i class="fas fa-user-graduate"></i>
+            <p>
+              2018 - > 2019<br />
+              Student - Digital Career Institute<br />
+              Full Stack Web Developer
+            </p>
+          </div>
+          <div class="resume" id="resume-top">
+            <i class="fas fa-briefcase"></i>
+            <p>
+              2014 - > present <br />
+              Self-Employed - Sound Designer /Musician<br />
+              Theatre, Dance, Video, Animation
+            </p>
+          </div>
+          <div class="resume">
+            <i class="fas fa-briefcase"></i>
+            <p>
+              2016 - > 2018<br />
+              Customer Service Executive - Booking.com <br />
+            </p>
+          </div>
+          <div class="resume">
+            <i class="fas fa-briefcase"></i>
+            <p>
+              2013 -> 2016 <br />
+              Venues & Events Officer/AV Tech - City of Yarra<br />
+              Supervising events & operating sound and vision
+            </p>
+          </div>
+          <div class="resume" id="resume-bottom">
+            <i class="fas fa-user-graduate"></i>
+            <p>
+              2004 -> 2007<br />
+              Bachelor of Business (marketing)<br />
+              Experience as marketing assistant and marketing coordinator
+            </p>
+          </div>
+          <div class="resume" id="resume-bottom">
+            <i class="fas fa-user-graduate"></i>
+            <p>
+              2010 -> 2014<br />
+              Bachelor of Fine Arts (Sound Art)<br />
+              Studies in sound, sculplture and spatial practice
+            </p>
+          </div>
+        </div>
+      </section>
 
-        </section>
+      <section id="contact" class="contact-block">
+        <form action="form.php" method="post">
+          <h1>Want to hire me?</h1>
+          <!-- <label for="firstname">Name</label> -->
+          <input
+            class="name-input"
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Name"
+            required
+          />
+          <!-- <label for="lastname">Last Name</label> -->
+          <input
+            class="last-name-input"
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Last Name"
+            required
+          />
+          <!-- <label for="email">E-mail</label> -->
+          <input type="email" name="email" placeholder="E-mail" required />
+          <!-- <label for="message">How Can I Help You?</label> -->
+          <textarea
+            name="message"
+            id="message"
+            required="text"
+            maxlength="200"
+            wrap="hard"
+            placeholder="Write your request here"
+          ></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
 
-        <footer class="footer-block">
-
-            <a href="https://www.facebook.com/claudius.maximus.395" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.linkedin.com/in/claudio-tocco-berlin/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ctocco" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:tocco.a.claudio@gmail.com?subject = Feedback&body = Message" target="_blank"><i class="fas fa-envelope"></i></a>
-
-        </footer>
-
+      <footer class="footer-block">
+        <a href="https://www.instagram.com/claudiustoximus" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/claudio-tocco-berlin/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/ctocco" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="mailto:tocco.a.claudio@gmail.com?subject = Feedback&body = Message"
+          target="_blank"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </footer>
     </div>
 
     <script src="src/js/javascript.js"></script>
-
-</body>
+  </body>
 </html>
-
