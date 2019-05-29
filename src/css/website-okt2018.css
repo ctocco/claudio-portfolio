@@ -87,10 +87,10 @@ body {
   body .content {
     display: grid;
     grid-template-columns: repeat(4, [col] 1fr);
-    grid-template-rows: 100vh auto auto auto auto auto auto 50px;
+    grid-template-rows: 100vh auto auto auto auto auto 50px;
     width: 100%;
     height: auto;
-    grid-template-areas: "headerName headerName headerName headerName" "aboutMe aboutMe aboutMe aboutMe" "portfolio portfolio portfolio portfolio" "about-me about-me about-me about-me" "resume resume resume resume" "about-text about-text about-skills about-skills" "contact contact contact contact" "footer footer footer footer"; }
+    grid-template-areas: "headerName headerName headerName headerName" "aboutMe aboutMe aboutMe aboutMe" "portfolio portfolio portfolio portfolio" "about-me about-me about-me about-me" "resume resume resume resume" "about-text about-text about-skills about-skills" "footer footer footer footer"; }
     body .content .headerName {
       display: flex;
       flex-direction: column;
@@ -237,61 +237,6 @@ body {
           body .content .resume-block .resume-wrapper .resume i {
             font-size: 1.5em;
             padding-right: 10px; }
-    body .content .contact-block {
-      grid-area: contact;
-      padding: 10px 0 100px 0;
-      width: 100%; }
-      body .content .contact-block form {
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat 4, 1fr;
-        width: 400px;
-        height: auto;
-        grid-gap: 10px; }
-        body .content .contact-block form h1 {
-          padding-bottom: 30px;
-          justify-self: center;
-          grid-column: 1/3;
-          font-size: 2rem; }
-        body .content .contact-block form input,
-        body .content .contact-block form textarea {
-          justify-self: center;
-          font-family: karla, sans-serif;
-          grid-column: 1/3;
-          width: 50vw;
-          border: none; }
-        body .content .contact-block form input {
-          border-bottom: 1px solid black; }
-        body .content .contact-block form textarea {
-          background: white; }
-        body .content .contact-block form input[type="text"] {
-          padding: 10px; }
-        body .content .contact-block form input[type="email"] {
-          padding: 10px; }
-        body .content .contact-block form textarea[required="text"] {
-          padding-left: 10px;
-          padding-top: 10px;
-          width: 50vw;
-          height: 50vh; }
-        body .content .contact-block form input[type="submit"] {
-          margin: 10px 0;
-          justify-self: center;
-          grid-column: 1/3;
-          background-color: #333;
-          color: white;
-          padding: 10px;
-          width: 50vw; }
-        body .content .contact-block form input[type="submit"]:hover {
-          background-color: #dddddd;
-          color: #333;
-          transition: all 2s ease; }
-        body .content .contact-block form textarea[required] {
-          justify-self: center;
-          max-width: 50vw;
-          height: 100px;
-          text-decoration: none;
-          padding: 10px; }
     body .content .footer-block {
       grid-area: footer;
       display: flex;
@@ -316,8 +261,8 @@ body {
   .content {
     width: 100vw;
     grid-template-columns: 1fr !important;
-    grid-template-rows: 100vh auto auto auto auto auto auto auto 50px !important;
-    grid-template-areas: "headerName" "aboutMe" "portfolio" "about-me" "about-text" "about-skills" "resume" "contact" "footer" !important; }
+    grid-template-rows: 100vh auto auto auto auto auto auto 50px !important;
+    grid-template-areas: "headerName" "aboutMe" "portfolio" "about-me" "about-text" "about-skills" "resume" "footer" !important; }
     .content .headerName {
       width: 100vw !important; }
       .content .headerName h1 {
@@ -332,16 +277,9 @@ body {
       width: 100% !important; }
     .content .aboutMe .about-me-container p {
       padding: 0 25px 0 25px !important; }
-    .content .contact-block textarea[required] {
-      justify-self: center;
-      max-width: 400px !important; }
-    .content .contact-block input,
-    .content .contact-block textarea {
-      width: 400px !important; }
     .content .resume {
       width: 70vw !important;
       margin: 10px; } }
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 601px) {
   body .collapsible-menu {
     display: none; }

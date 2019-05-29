@@ -121,7 +121,7 @@ body {
   .content {
     display: grid;
     grid-template-columns: repeat(4, [col] 1fr);
-    grid-template-rows: 100vh auto auto auto auto auto auto 50px;
+    grid-template-rows: 100vh auto auto auto auto auto 50px;
     width: 100%;
     height: auto;
 
@@ -132,7 +132,6 @@ body {
       "about-me about-me about-me about-me"
       "resume resume resume resume"
       "about-text about-text about-skills about-skills"
-      "contact contact contact contact"
       "footer footer footer footer";
 
     .headerName {
@@ -140,7 +139,6 @@ body {
       flex-direction: column;
       grid-area: headerName;
       justify-content: safe center;
-
       background: linear-gradient(rgba(0, 0, 0, 1), rgba(148, 255, 157, 0.5)),
         url("/src/img/Sky.jpg") no-repeat right top;
       background-attachment: fixed;
@@ -348,87 +346,6 @@ body {
       }
     }
 
-    .contact-block {
-      grid-area: contact;
-      padding: 10px 0 100px 0;
-      width: 100%;
-      form {
-        margin: auto;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat (4, 1fr);
-        width: 400px;
-        height: auto;
-        grid-gap: 10px;
-        // border-top-right-radius: 10px;
-        // border-top-left-radius: 10px;
-
-        h1 {
-          padding-bottom: 30px;
-          justify-self: center;
-          grid-column: 1/3;
-          font-size: 2rem;
-        }
-
-        input,
-        textarea {
-          justify-self: center;
-          font-family: karla, sans-serif;
-          grid-column: 1/3;
-          width: 50vw;
-          border: none;
-        }
-
-        input {
-          border-bottom: 1px solid black;
-        }
-
-        textarea {
-          background: white;
-        }
-
-        input[type="text"] {
-          padding: 10px;
-        }
-
-        input[type="email"] {
-          padding: 10px;
-        }
-
-        textarea[required="text"] {
-          padding-left: 10px;
-          padding-top: 10px;
-          width: 50vw;
-          height: 50vh;
-        }
-
-        input[type="submit"] {
-          margin: 10px 0;
-          justify-self: center;
-          grid-column: 1/3;
-          background-color: #333;
-          color: white;
-          padding: 10px;
-          width: 50vw;
-        }
-
-        input[type="submit"]:hover {
-          background-color: $secondary-color;
-          color: #333;
-          transition: all 2s ease;
-        }
-
-        textarea[required] {
-          justify-self: center;
-          max-width: 50vw;
-          height: 100px;
-          text-decoration: none;
-          padding: 10px;
-        }
-      }
-    }
-
     .footer-block {
       grid-area: footer;
       display: flex;
@@ -458,7 +375,7 @@ body {
   .content {
     width: 100vw;
     grid-template-columns: 1fr !important;
-    grid-template-rows: 100vh auto auto auto auto auto auto auto 50px !important;
+    grid-template-rows: 100vh auto auto auto auto auto auto 50px !important;
     grid-template-areas:
       "headerName"
       "aboutMe"
@@ -467,7 +384,6 @@ body {
       "about-text"
       "about-skills"
       "resume"
-      "contact"
       "footer" !important;
 
     .headerName {
@@ -495,16 +411,6 @@ body {
         }
       }
     }
-    .contact-block {
-      textarea[required] {
-        justify-self: center;
-        max-width: 400px !important;
-      }
-      input,
-      textarea {
-        width: 400px !important;
-      }
-    }
     .resume {
       width: 70vw !important;
       margin: 10px;
@@ -512,7 +418,6 @@ body {
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 601px) {
   body {
     .collapsible-menu {
@@ -526,7 +431,6 @@ body {
       }
     }
   }
-
   #name-title {
     display: none;
   }
@@ -537,7 +441,6 @@ body {
   #name-title {
     display: inline;
   }
-  // toggle menu for the mobile versions
 }
 
 input:checked ~ label {
